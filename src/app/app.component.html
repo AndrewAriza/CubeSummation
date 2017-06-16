@@ -1,3 +1,16 @@
-<h1>
-  {{title}}
-</h1>
+<md-toolbar color="primary">
+  <span  layout-align="center center">Cube Summation</span>
+</md-toolbar>
+<md-grid-list cols="2" rowHeight="500px">
+  <md-grid-tile>
+    <md-input-container>
+      <textarea mdInput placeholder="Input" name="input" [(ngModel)]="input" class="texttarea"></textarea>
+    </md-input-container>
+  </md-grid-tile>
+  <md-grid-tile>
+    <md-input-container>
+      <textarea mdInput placeholder="output" name="output" [(ngModel)]="output" class="texttarea" disabled></textarea>
+    </md-input-container>
+  </md-grid-tile>
+</md-grid-list>
+<button (click)="main(input)" color="primary" style="float: right;" md-raised-button>Calcular</button>

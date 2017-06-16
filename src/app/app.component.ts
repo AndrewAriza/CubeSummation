@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MdSnackBar } from '@angular/material';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,8 @@ export class AppComponent {
   input: string;
   output: string;
   error: string;
+
+  constructor(public snackBar: MdSnackBar) {}
 
   main(input: string): void {
     try {
@@ -37,6 +40,9 @@ export class AppComponent {
     } catch (e) {
       this.output = '';
       this.error = e;
+      this.snackBar.open(e, null, {
+        duration: 2000
+      });
     }
   }
 

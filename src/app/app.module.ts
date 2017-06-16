@@ -5,6 +5,11 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 
+import 'hammerjs';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MdButtonModule, MdInputModule, MdGridListModule, MdSnackBarModule, MdToolbarModule } from '@angular/material';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -12,7 +17,13 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    BrowserAnimationsModule,
+    MdButtonModule,
+    MdInputModule,
+    MdGridListModule,
+    MdSnackBarModule,
+    MdToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
