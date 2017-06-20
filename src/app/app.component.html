@@ -1,7 +1,7 @@
 <md-toolbar color="primary">
   <span  layout-align="center center">Cube Summation</span>
 </md-toolbar>
-<md-grid-list cols="2" rowHeight="500px">
+<md-grid-list cols="2" rowHeight="2:1.5">
   <md-grid-tile>
     <md-input-container>
       <textarea mdInput placeholder="Input" name="input" [(ngModel)]="input" class="texttarea"></textarea>
@@ -13,4 +13,4 @@
     </md-input-container>
   </md-grid-tile>
 </md-grid-list>
-<button (click)="main(input)" color="primary" style="float: right;" md-raised-button>Calcular</button>
+<button name="button" (click)="main(input)" color="primary" style="float: right;" md-raised-button>Calcular</button>

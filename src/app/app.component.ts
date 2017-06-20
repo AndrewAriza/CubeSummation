@@ -7,9 +7,9 @@ import { MdSnackBar } from '@angular/material';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  input: string;
-  output: string;
-  error: string;
+  private input: string;
+  private output: string;
+  private error: string;
 
   constructor(public snackBar: MdSnackBar) {}
 

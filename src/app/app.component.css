@@ -1,4 +1,7 @@
 textarea {
-  width: 670px;
   height: 450px;
+}
+md-input-container {
+  width: 100%;
+  height: 100%;
 }
