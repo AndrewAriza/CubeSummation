@@ -9,14 +9,12 @@ import { MdSnackBar } from '@angular/material';
 export class AppComponent {
   private input: string;
   private output: string;
-  private error: string;
 
   constructor(public snackBar: MdSnackBar) {}
 
   main(input: string): void {
     try {
       this.output = '';
-      this.error = '';
       if(!input) throw new Error('El input esta vacío!');
       let inputLines: Array<string> = input.split('\n');
       if(!parseInt(inputLines[0])) throw new Error('Favor indicar la cantidad de segementos');
@@ -39,7 +37,6 @@ export class AppComponent {
       }
     } catch (e) {
       this.output = '';
-      this.error = e;
       this.snackBar.open(e, null, {
         duration: 2000
       });
